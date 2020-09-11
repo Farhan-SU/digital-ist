@@ -1,0 +1,284 @@
+@import 'button.scss';
+$background: rgb(255, 242, 242);
+$text: #1A2632;
+$heading1: #ffefdd;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+:root, body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%; 
+    color: rgb(34, 0, 0);
+}
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+}
+p, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+a.active, .navbar-light .navbar-nav .active > .nav-link{
+    color: rgb(68, 0, 0);
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: rgb(68, 0, 0);
+}
+a.navbar-brand{
+    width: 60%;
+   flex-basis: 60%;
+   flex-grow: 3;
+   flex-shrink: 0;
+}
+nav.navbar.navbar-expand-lg.navbar-light{
+    width: 100vw;
+    padding-left: 2.5rem;
+}
+.nav-wrapper{
+    position: sticky;
+    width: 100vw;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 0 2px 2px -5px rgba(80, 80, 80, 0.13);
+    z-index: 3;
+
+    .logo{
+        width: 10%;
+    }
+}
+
+.container-fluid{
+    margin:0 !important;
+    padding: 0 !important;
+}
+.mainwrapper{
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+}
+.section{
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid red;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/intropt2.gif') no-repeat top center;   
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 300px; 
+
+    .intro{
+        color: $heading1;
+        width: 60%;
+        position: relative;
+        top: 30%;
+        left: 4%;
+        text-shadow: 0 3px 3px -5px rgba(80, 80, 80, 0.13);
+    
+        h1{
+            font-size: 6rem;
+            font-weight: 700;
+        }
+        h2{
+            font-weight: 300;
+            line-height: 3rem;
+           
+        }
+    }
+}
+.rest-of-the-content{
+    height: max-content;
+    overflow-x: hidden;
+    background-color: $background;
+}
+.whatweare{
+    color: $text;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 1rem 6rem;
+
+    h2{
+        color: rgb(46, 0, 0);
+        flex-direction: column;
+        flex: 2.5;
+        font-size: 5rem;
+        font-weight: 600;
+        padding: 2rem 1rem;
+        position: relative;
+        top: 7%;
+    }
+    p{
+        flex-direction: column;
+        flex: 2;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        padding: 1.5rem;
+
+    }
+   
+}
+.products{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    .img-details{
+        height: 300px;
+        position: relative;
+    }
+    .img-details div{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 1.2rem;
+        width: 63%;
+        position: absolute;
+        top: 31%;
+        left: 15%;
+        color: rgb(255, 240, 173);
+        margin-bottom: 5px;
+        opacity: 0;
+        -webkit-transition: visibility 0.5s, opacity 0.3s ease-in-out; 
+        transition:visibility 0.5s, opacity 0.2s ease-in-out; 
+        z-index: 2;
+
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+ 
+    img{
+        height: 100%;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 1rem;
+        height: 400px;
+
+    }
+    .more{
+        background: url('../images/more.png') no-repeat center center;
+        background-size: contain;
+        height: 300px;
+        position: relative;
+        top: -3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        h3{
+           font-size: 1.5rem;
+           position: relative;
+           top: -0.5rem;
+           opacity: 0.7;
+        }
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 1.7rem 0;
+    }
+}
+
+.included{
+    overflow-x: hidden;
+    overflow: hidden;
+    height: 190vh;
+    background: $text url('../images/circle.svg') no-repeat;
+    background-position: 100% -10%;
+    background-size: 80%;
+    padding: 3rem;
+
+    .services-des{
+        margin: 7rem auto auto 2rem;
+        color: $heading1;
+    }
+    h2{
+        width: 600px;
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 5.5rem;
+    }
+    p{
+        font-size: 1.6rem;
+        width: 70%;
+        margin: 2rem 0;
+        opacity: 0.9;
+        line-height: 2.7rem;
+    }
+    .des{
+        margin-top: 22rem;
+       position: relative;
+       top: 30%;
+        ul{
+            list-style: none;
+            padding: 0.5rem;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+    
+        }
+        li{
+            height:200px;
+            width: 200px;
+            background-color: rgb(217, 221, 255);
+            border-radius: 50%;
+
+            h3{
+            font-size: 2rem;
+            position: relative;
+            top: 35%;
+            left: 2%;
+            text-align: center;
+            }
+            .exception{
+                position: relative;
+                top: 27%;
+            }
+        }
+    }
+
+}
+.buy{
+    overflow: hidden;
+   background: $text url('../images/intropic.gif') no-repeat ; 
+   background-size: contain;
+   height: 100vh;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   h2{
+       font-size: 3.5rem;
+       padding: 2rem;
+       margin-left: 0 2rem;
+       width: 45%;
+       text-align: center;
+       text-transform: capitalize;
+       float: right;
+       line-height: 4.5rem;
+       color: $heading1;
+   }
+   .button{
+       float: right;
+       font-size: 1.3rem;
+       position: relative;
+       left: 30%;
+   }
+   
+}
